@@ -1,0 +1,79 @@
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #F8F0E5;
+}
+
+.container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  padding: 20px;
+  background-color: #EADBC8;
+  box-shadow: 5px 5px 15px #102C57;
+}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #DAC0A3;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  outline: none;
+}
+
+button {
+  background-color: #102C57;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+a {
+  color: #102C57;
+}
+h1 {
+  text-align: center;
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+<h1>Login</h1>
+<form action="/action_page.php" method="post">
+<label for="username"><i class="fa fa-user icon"></i> <b>Username</b></label>
+<input type="text" placeholder="Enter Username" name="username" id="username" required>
+
+<label for="password"><i class="fa fa-key icon"></i> <b>Password</b></label>
+<input type="password" placeholder="Enter Password" name="password" id="password" required>
+
+<button type="submit" formaction="/">Login</button>
+<a href="#">Forgot password?</a> | <a href="#">Register</a>
+</form>
+</div>
+
+
+
+</body>
+</html>

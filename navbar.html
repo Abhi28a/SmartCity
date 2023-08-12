@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #F8F0E5;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .tabs {
+    display: flex;
+    gap: 20px;
+  }
+
+  .tab {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #DAC0A3;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+
+  .tab:hover {
+    background-color: #EADBC8;
+    transform: scale(1.05);
+  }
+
+  /* Style for the links */
+  .tab a {
+    text-decoration: none;
+    color: #000;
+/*    font-weight: bold;*/
+    transition: color 0.3s ease;
+  }
+
+  .tab a:hover {
+    color: #FF7F50;
+  }
+</style>
+
+<title>Colored Navbar</title>
+</head>
+<body>
+<div class="container">
+  <div class="tabs">
+    <div class="tab"><a href="/">Home</a></div>
+    <div class="tab"><a href="/about">About</a></div>
+    <div class="tab"><a href="/register">Register</a></div>
+    <div class="tab"><a href="/login">Login</a></div>
+  </div>
+</div>
+</body>
+</html>
+

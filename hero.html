@@ -1,0 +1,155 @@
+<head>
+    <title>OP Health Clinic Management System</title>
+ -->    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      .hero {
+        background-image: url('https://images.unsplash.com/photo-1576091160550-2173dba999ef');
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .hero-content {
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        padding: 40px;
+        text-align: center;
+      }
+
+      .hero-content h1 {
+        font-size: 48px;
+        margin-bottom: 20px;
+      }
+
+      .hero-content p {
+        font-size: 24px;
+        margin-bottom: 30px;
+      }
+
+      .btn {
+        background-color: #fff;
+        border: none;
+        border-radius: 4px;
+        color: #2980b9;
+        cursor: pointer;
+        font-size: 16px;
+        padding: 12px 20px;
+      }
+
+      .btn:hover {
+        background-color: #ccc;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 0;
+      }
+
+      .thumbnails {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .thumbnail {
+        width: calc(33.33% - 20px);
+        text-align: center;
+      }
+
+      .thumbnail i {
+        font-size: 48px;
+        color: #2980b9;
+      }
+
+      .thumbnail h3 {
+        margin-top: 10px;
+      }
+      
+       #mySidenav a {
+         position :fixed; 
+         right :-80px; 
+         transition :0.3s; 
+         padding :15px; 
+         width :100px; 
+         text-decoration :none; 
+         font-size :20px; 
+         color :white; 
+         border-radius :5px 0 0 10px; 
+       }
+       #mySidenav a:hover{
+         right :0; 
+       }
+       #login{
+         top :20%; 
+         background-color :#454545; 
+       }
+       #register{
+         top :calc(20% + 60px); 
+         background-color :#FF6000; 
+       }
+       #book{
+         top :calc(20% + (60px *2)); 
+         background-color :#FFA559; 
+       }
+       #doctors{
+         top :calc(20% + (60px *3)); 
+         background-color :#FFE6C7
+       }
+       #feedback{
+         top :calc(20% + (60px *4)); 
+         background-color :#B46060
+       }
+       #contact{
+         top :calc(20% + (60px *5)); 
+         background-color :#555
+       }
+    </style>
+ </head>
+ <body>
+<!--   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <div class="hero">
+      <div id="mySidenav" class="sidenav">
+          <a href="SignIn.jsf" id="login"><i class="fa fa-sign-in"></i>  Login</a>
+          <a href="SignUp.jsf" id="register"><i class="fa fa-user-plus"></i>  Sign Up</a>
+          <a href="Appointment.jsf" id="book"><i class="fa fa-book"></i>  Book</a>
+          <a href="Doctors.jsf" id="doctors"><i class="fa fa-user-md"></i>  Doctors</a>
+          <a href="Report.jsf" id="feedback"><i class="fa fa-comments-o"></i>  Report</a>
+          <a href="Contact.jsf" id="contact"><i class="fa fa-envelope-o"></i>  Contact</a>
+      </div>
+
+    
+    <div class="hero-content">
+            <h1>OP Health Clinic Management System</h1>
+            <p>Efficiently manage your clinic with our all-in-one solution.</p>
+            <h:commandButton action="SignIn.jsf" value="Learn More" class="btn"/>
+          </div>
+    </div>
+
+    <div class="container">
+          <div class="thumbnails">
+            <div class="thumbnail">
+              <i class="fa fa-calendar"></i>
+              <h3>Book Appointments</h3>
+              <a href="Appointment.jsf"><button class="btn">Book Now</button></a>
+            </div>
+            <div class="thumbnail">
+              <i class="fa fa-user-md"></i>
+              <h3>Doctors</h3>
+              <a href="Doctors.jsf"><button class="btn">View Doctors</button></a>
+            </div>
+            <div class="thumbnail">
+              <i class="fa fa-comments"></i>
+              <h3>Feedback</h3>
+              <a href="Feedback.jsf"><button class="btn">Give Feedback</button></a>
+            </div>
+          </div>
+    </div>
+  </body>

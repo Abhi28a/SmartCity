@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+VlJSzQ9S6s27SU++rbUv+uHmfQe+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+
+<title>Registration Page</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #F8F0E5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  .container {
+    width: 30%;
+    height: 40%;
+    background-color: #EADBC8;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  h2 {
+    color: #102C57;
+    text-align: center;
+  }
+
+  .input-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .input-container i {
+    font-size: 20px;
+    color: #DAC0A3;
+    margin-right: 10px;
+  }
+
+  input[type="text"], input[type="email"], input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid #102C57;
+    outline: none;
+    font-size: 16px;
+  }
+
+  .btn-container {
+    text-align: center;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    background-color: #102C57;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  .btn:hover {
+    background-color: #1A406F;
+  }
+</style>
+</head>
+<body>
+  <div class="container"style="justify-content: center;" >
+    <h2>Registration</h2>
+    <form>
+      <div class="input-container">
+        <i class="fas fa-user"></i>
+        <input type="text" placeholder="Full Name" required>
+      </div>
+      <div class="input-container">
+        <i class="fas fa-user"></i>
+        <input type="text" placeholder="Username" required>
+      </div>
+      <div class="input-container">
+        <i class="fas fa-envelope"></i>
+        <input type="email" placeholder="Email" required>
+      </div>
+      <div class="input-container">
+        <i class="fas fa-phone"></i>
+        <input type="tel" placeholder="Contact" required>
+      </div>
+      <div class="btn-container">
+        <button class="btn" type="submit" formaction="/">Register</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
