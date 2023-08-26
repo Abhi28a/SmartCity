@@ -2,6 +2,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script>
+        // Function to show an alert when the user right-clicks
+        function showAlert(event) {
+            event.preventDefault(); // Prevent the default context menu
+            alert("Right-clicking is disabled on this page.");
+        }
+        
+        // Attach the showAlert function to the contextmenu event
+        document.addEventListener("contextmenu", showAlert);
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-Do List</title>
