@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script>
+  <script>
         // Function to show an alert when the user right-clicks
         function showAlert(event) {
             event.preventDefault(); // Prevent the default context menu
@@ -13,88 +13,37 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>Navbar Example</title>
-    <style type="text/css">
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-        }
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <style type="text/css">
+      body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
 
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            background-color: #333;
-            padding: 10px;
-        }
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: #333; /* Change this to your desired background color */
+    padding: 10px;
+}
 
-        .nav-item {
-            text-decoration: none;
-            color: #FFF;
-            margin: 0 15px;
-            padding: 5px 10px;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
+.nav-item {
+    text-decoration: none;
+    color: #FFF; /* Change this to your desired text color */
+    margin: 0 15px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
 
-        .nav-item:hover {
-            background-color: #EADBC8;
-            color: #102C57;
-        }
-
-        /* Hamburger icon styles */
-        .hamburger {
-            display: flex;
-            flex-direction: column;
-            cursor: pointer;
-            padding: 10px;
-        }
-
-        .bar {
-            width: 30px;
-            height: 3px;
-            background-color: #FFF;
-            margin: 3px 0;
-            transition: 0.4s;
-        }
-
-        /* Dropdown styles */
-        .dialog-box {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            z-index: 999;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .dropdown-content {
-            flex-direction: column;
-            position: absolute;
-            background-color: #333;
-            min-width: 200px;
-            right: 0;
-            z-index: 1;
-            border-radius: 5px;
-        }
-
-        .dropdown-item {
-            padding: 10px;
-            color: #FFF;
-            text-decoration: none;
-            text-align: center;
-            transition: background-color 0.3s ease;
-        }
-
-        .dropdown-item:hover {
-            background-color: #EADBC8;
-        }
-
-        .hero-image {
+.nav-item:hover {
+    background-color: #EADBC8; /* Change this to your desired hover color */
+    color: #102C57;
+}
+.hero-image {
             width: 100%;
             height: 100vh;
             background-image: url('https://images.unsplash.com/photo-1533587851505-d119e13fa0d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
@@ -107,28 +56,23 @@
             color: #ffffff;
             text-align: center;
         }
-
         .hero-content {
             max-width: 800px;
             padding: 20px;
             background-color: rgba(0, 0, 0, 0.5);
             border-radius: 10px;
         }
-
         h1 {
             font-size: 36px;
             margin-bottom: 10px;
         }
-
         p {
             font-size: 18px;
             margin-bottom: 20px;
         }
-
         .btn-container {
             margin-top: 20px;
         }
-
         .b {
             padding: 10px 20px;
             background-color: #333;
@@ -136,202 +80,225 @@
             text-decoration: none;
             border-radius: 5px;
         }
-
         .b:hover {
-            background-color: #EADBC8;
+            background-color: #EADBC8; /* Change this to your desired hover color */
             color: #102C57;
         }
+.icon-boxes {
+      padding: 80px 0;
+      background-color: #F6F4EB; /* Updated background color */
+    }
 
-        .icon-boxes {
-            padding: 80px 0;
-            background-color: #F6F4EB;
-        }
+    .icon-box {
+      position: relative; /* Added position property */
+      background: #91C8E4; /* Updated background color */
+      border-radius: 10px;
+      box-shadow: 0px 0px 20px rgba(78, 78, 78, 0.2); /* Adjusted box-shadow */
+      padding: 30px;
+      transition: all 0.4s ease-in-out;
+    }
 
-        .icon-box {
-            position: relative;
-            background: #91C8E4;
-            border-radius: 10px;
-            box-shadow: 0px 0px 20px rgba(78, 78, 78, 0.2);
-            padding: 30px;
-            transition: all 0.4s ease-in-out;
-        }
+    /* Apply hover and floating effect to icon-box on hover */
+    .icon-box:hover {
+      transform: scale(1.05); /* Zoom effect */
+      z-index: 2; /* Bring to front */
+      box-shadow: 0px 0px 40px rgba(78, 78, 78, 0.4); /* Enhanced shadow on hover */
+    }
 
-        .icon-box:hover {
-            transform: scale(1.05);
-            z-index: 2;
-            box-shadow: 0px 0px 40px rgba(78, 78, 78, 0.4);
-        }
+    .icon img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px; /* Rounded corners for rectangular shape */
+      transition: background 0.4s;
+    }
 
-        .icon img {
-            display: block;
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-            transition: background 0.4s;
-        }
+    .title {
+      font-size: 24px;
+      font-weight: 700;
+      margin-top: 20px;
+      color: #749BC2; /* Updated title color */
+    }
 
-        .title {
-            font-size: 24px;
-            font-weight: 700;
-            margin-top: 20px;
-            color: #749BC2;
-        }
+    .description {
+      font-size: 14px;
+      line-height: 24px;
+      margin-top: 15px;
+      color: #749BC2; /* Updated description color */
+    }
 
-        .description {
-            font-size: 14px;
-            line-height: 24px;
-            margin-top: 15px;
-            color: #749BC2;
-        }
+    .button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 25px;
+      background: #DAC0A3; /* Updated button background color */
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.4s;
+    }
 
-        .button {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 25px;
-            background: #DAC0A3;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background 0.4s;
-        }
+    .button:hover {
+      background: #BA9C7A; /* Adjusted hover color */
+    }
 
-        .button:hover {
-            background: #BA9C7A;
-        }
+    /* Media Queries */
+    @media (max-width: 992px) {
+      .icon-boxes {
+        padding: 60px 0;
+      }
 
-        @media (max-width: 992px) {
-            .icon-boxes {
-                padding: 60px 0;
-            }
+      .icon-box {
+        margin-bottom: 30px;
+      }
+    }
+    .icon-boxes {
+      padding: 80px 0;
+      background-color: #F8F0E5; /* Updated background color */
+    }
 
-            .icon-box {
-                margin-bottom: 30px;
-            }
-        }
+    .icon-box {
+      position: relative; /* Added position property */
+      background: #EADBC8; /* Updated background color */
+      border-radius: 10px;
+      box-shadow: 0px 0px 20px rgba(78, 78, 78, 0.2); /* Adjusted box-shadow */
+      padding: 30px;
+      transition: all 0.4s ease-in-out;
+    }
 
-        .icon-boxes {
-            padding: 80px 0;
-            background-color: #F8F0E5;
-        }
+    /* Apply hover and floating effect to icon-box on hover */
+    .icon-box:hover {
+      transform: scale(1.05); /* Zoom effect */
+      z-index: 2; /* Bring to front */
+      box-shadow: 0px 0px 40px rgba(78, 78, 78, 0.4); /* Enhanced shadow on hover */
+    }
 
-        .icon-box {
-            position: relative;
-            background: #EADBC8;
-            border-radius: 10px;
-            box-shadow: 0px 0px 20px rgba(78, 78, 78, 0.2);
-            padding: 30px;
-            transition: all 0.4s ease-in-out;
-        }
+    .icon img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px; /* Rounded corners for rectangular shape */
+      transition: background 0.4s;
+    }
 
-        .icon-box:hover {
-            transform: scale(1.05);
-            z-index: 2;
-            box-shadow: 0px 0px 40px rgba(78, 78, 78, 0.4);
-        }
+    .title {
+      font-size: 24px;
+      font-weight: 700;
+      margin-top: 20px;
+      color: #102C57; /* Updated title color */
+    }
 
-        .icon img {
-            display: block;
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-            transition: background 0.4s;
-        }
+    .description {
+      font-size: 14px;
+      line-height: 24px;
+      margin-top: 15px;
+      color: #102C57; /* Updated description color */
+    }
 
-        .title {
-            font-size: 24px;
-            font-weight: 700;
-            margin-top: 20px;
-            color: #102C57;
-        }
+    .button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 25px;
+      background: #DAC0A3; /* Updated button background color */
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.4s;
+    }
 
-        .description {
-            font-size: 14px;
-            line-height: 24px;
-            margin-top: 15px;
-            color: #102C57;
-        }
+    .button:hover {
+      background: #BA9C7A; /* Adjusted hover color */
+    }
 
-        .button {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 25px;
-            background: #DAC0A3;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background 0.4s;
-        }
+    /* Media Queries */
+    @media (max-width: 992px) {
+      .icon-boxes {
+        padding: 60px 0;
+      }
 
-        .button:hover {
-            background: #BA9C7A;
-        }
-
-        @media (max-width: 992px) {
-            .icon-boxes {
-                padding: 60px 0;
-            }
-
-            .icon-box {
-                margin-bottom: 30px;
-            }
-        }
-    </style>
+      .icon-box {
+        margin-bottom: 30px;
+      }
+    }
+  </style>
 </head>
 <body>
-<div class="navbar">
-    <a href="tourism.html" class="nav-item">Home</a>
-    <a href="#" class="nav-item">Destination</a>
-    <a href="feedback.html" class="nav-item">Feedback</a>
-    <a href="feedback.html" class="nav-item">Bucket List</a>
-    <div class="nav-item dropdown">
-        <div class="hamburger" onclick="toggleDropdown()">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-        </div>
-        <div class="dialog-box" id="dialogBox">
-            <div class="dropdown-content">
-                <div class="dropdown-item">Item 1</div>
-                <div class="dropdown-item">Item 2</div>
-                <div class="dropdown-item">Item 3</div>
-                <div class="close-button" onclick="closeDialog()">Close</div>
+
+  <section id="icon-boxes" class="icon-boxes">
+    <div class="container">
+      <div class="row">
+        <!-- Apply hover and floating effect to this element -->
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="..." alt="Card image cap">
+            <div class="card-body">
             </div>
-        </div>
+          </div>
+        <!-- Repeat the above structure for other icon-boxes -->
+
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="..." alt="Card image cap">
+            <div class="card-body">
+            </div>
+          </div>
+        <!-- Repeat the above structure for other icon-boxes -->
+
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="..." alt="Card image cap">
+            <div class="card-body">
+            </div>
+          </div>
+        <!-- Repeat the above structure for other icon-boxes -->
+
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="..." alt="Card image cap">
+            <div class="card-body">
+            </div>
+          </div>
+        <!-- Repeat the above structure for other icon-boxes -->
+
+      </div>
+
+      <br>
+      <!-- second row  -->
+
+      <div class="row">
+        <!-- Apply hover and floating effect to this element -->
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="..." alt="Card image cap">
+            <div class="card-body">
+            </div>
+          </div>
+        <!-- Repeat the above structure for other icon-boxes -->
+
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="..." alt="Card image cap">
+            <div class="card-body">
+            </div>
+          </div>
+        <!-- Repeat the above structure for other icon-boxes -->
+
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="..." alt="Card image cap">
+            <div class="card-body">
+            </div>
+          </div>
+        <!-- Repeat the above structure for other icon-boxes -->
+
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="..." alt="Card image cap">
+            <div class="card-body">
+            </div>
+          </div>
+        <!-- Repeat the above structure for other icon-boxes -->
+
+      </div>
     </div>
-</div>
+  </section>
 
-<div class="hero-image">
-    <div class="hero-content">
-        <h1>Welcome to the SmartCityX Tourism</h1>
-        <p>Experience the future of urban living, where technology and innovation converge to create a smarter, greener, and more connected city.</p>
-        <div class="btn-container">
-            <a href="#" class="b">Get Involved</a>
-        </div>
-    </div>
-</div>
+  <!-- Add Bootstrap JS bundle link -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-<!-- Rest of your content goes here -->
-
-<script>
-    function toggleDropdown() {
-        var dialogBox = document.getElementById("dialogBox");
-        dialogBox.style.display = dialogBox.style.display === "block" ? "none" : "block";
-    }
-
-    function closeDialog() {
-        var dialogBox = document.getElementById("dialogBox");
-        dialogBox.style.display = "none";
-    }
-
-    // Close the dropdown when clicking outside of it
-    window.addEventListener("click", function (event) {
-        var dialogBox = document.getElementById("dialogBox");
-        if (!event.target.matches(".hamburger") && !event.target.matches(".dropdown-item")) {
-            dialogBox.style.display = "none";
-        }
-    });
-</script>
 </body>
 </html>
