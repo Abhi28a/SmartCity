@@ -1,0 +1,372 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+    justify-content: center; /* Center the links horizontally */
+    align-items: center; /* Center the links vertically */
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #000;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ff6600;
+}
+
+/* Remove hover effect for logo */
+.logo a:hover {
+    color: #fff;
+}
+
+.active a {
+    color: #ff6600;
+}
+
+/* Adjust the size of the logo image */
+.logo img {
+    width: 150px; /* Set the desired width */
+    height: auto; /* Auto height to maintain aspect ratio */
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    /* color: #fff; */
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #333;
+        width: 80%;
+        z-index: 1;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        text-align: center;
+        margin: 10px 0;
+    }
+}
+/* Add this CSS to increase text size of navigation links */
+.nav-links a {
+    text-decoration: none;
+    color: #000;
+    font-size: 20px; /* Adjust the font size as needed */
+    transition: color 0.3s;
+}
+
+/* Optionally, you can add a larger font size for active links */
+.active a {
+    color: #ff6600;
+    font-size: 20px; /* Adjust the font size as needed */
+}
+
+
+
+.hero-container {
+    display: flex;
+    justify-content: flex-start; /* Align content to the start (left side) */
+    align-items: flex-start; /* Align content to the top */
+    margin-left: 40px;
+}
+
+.animated {
+    flex: 1; /* Take up remaining space */
+    order: 2; /* Reorder to the right side */
+    text-align: right; /* Align content to the right */
+}
+
+.info {
+    flex: 1; /* Take up remaining space */
+    order: 1; /* Default order is 1 (left side) */
+    padding: 20px; /* Add padding for styling */
+}
+
+/* Style the span within h1 */
+.info h1 span.hollow-text {
+    font-size: 86px; /* Increase the font size */
+    font-weight: 700; /* Add font-weight (bold) */
+    color: transparent; /* Make the text transparent */
+    -webkit-text-stroke: 2px #333; /* Create a hollow effect with a stroke */
+}
+
+.info p {
+    font-size: 26px;
+    color: #666;
+}
+
+/* CSS for the button */
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    text-align: center;
+    background-color: #0077b6;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.3s, color 0.3s;
+}
+
+/* Bounce effect on hover */
+.cta-button:hover {
+    transform: scale(1.1);
+}
+
+/* Expanding effect and text color change after hover */
+.cta-button:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #fff;
+    z-index: -1;
+    transition: width 0.3s;
+}
+
+.cta-button:hover:after {
+    width: 100%;
+    background: #0077b6;
+    color: #fff;
+    border-radius: 10px;
+}
+
+
+
+#preloader {
+    background: #000 url('loader.gif') no-repeat center center;
+    background-size: 30%; /* Set the background size to 30% */
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 100px 50px;
+    padding: 100px 50px;
+}
+
+.container .card {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 350px;
+    max-width: 100%;
+    height: 350px;
+    background: white;
+    border-radius: 20px;
+    transition: 0.5s;
+    box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
+}
+
+.container .card:hover {
+    height: 400px;
+}
+
+.container .card .img-box {
+    position: absolute;
+    top: 20px;
+    width: 300px;
+    height: 220px;
+    background: #000000;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.container .card:hover .img-box {
+    top: -100px;
+    scale: 0.75;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+}
+
+.container .card .img-box img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container .card .content {
+    position: absolute;
+    top: 252px;
+    width: 100%;
+    height: 50px;
+    padding: 0 30px;
+    text-align: center;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.container .card:hover .content {
+    top: 130px;
+    height: 250px;
+}
+
+.container .card .content h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--clr);
+    margin-bottom: 10px;
+}
+
+.container .card .content p {
+    color: #333;
+}
+
+.container .card .content a {
+    position: relative;
+    top: 15px;
+    display: inline-block;
+    padding: 12px 25px;
+    text-decoration: none;
+    background: var(--clr);
+    color: white;
+    font-weight: 500;
+}
+
+.container .card .content a:hover {
+    opacity: 0.8;
+    background-color: #000000;
+    color: aqua;
+}
+
+@media (max-width: 480px) {
+    .container .card {
+        width: 230px;
+        border-radius: 15px;
+    }
+
+    .container .card .img-box {
+        width: 185px;
+        border-radius: 10px;
+    }
+
+    .container .card .content p {
+        font-size: 0.8rem;
+    }
+
+    .container .card .content a {
+        font-size: 0.9rem;
+    }
+}
+
+/* section-title */
+.section-title {
+    text-align: center;
+    padding-bottom: 30px;
+  }
+  
+  .section-title h2 {
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
+  }
+  
+  .section-title h2::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: #5846f9;
+    bottom: 0;
+    left: calc(50% - 25px);
+  }
+
+  
+  .ad-block {
+    background-color: transparent;
+    padding: 50px;
+    font-size: 196px; /* Adjust the font size */
+    font-weight: 700; /* Add font-weight (bold) */
+    color: transparent; /* Make the text transparent */
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide the overflow text */
+}
+
+.marquee { /* Right to Left */
+    display: flex;
+    -webkit-text-stroke: 2px #333;
+    animation: marquee-right 6s linear infinite; /* Adjust the speed as needed */
+}
+
+.marquee2 { /* Left to Right */
+    display: flex;
+    -webkit-text-stroke: 2px #333;
+    animation: marquee-left 6s linear infinite; /* Adjust the speed as needed */
+}
+
+@keyframes marquee-right {
+    0% {
+        transform: translateX(100%); /* Start off-screen to the right */
+    }
+    100% {
+        transform: translateX(-100%); /* Move off-screen to the left */
+    }
+}
+
+@keyframes marquee-left {
+    0% {
+        transform: translateX(-100%); /* Start off-screen to the left */
+    }
+    100% {
+        transform: translateX(100%); /* Move off-screen to the right */
+    }
+}

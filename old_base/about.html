@@ -1,17 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script>
-    // Function to show an alert when the user right-clicks
-    function showAlert(event) {
-        event.preventDefault(); // Prevent the default context menu
-        alert("Right-clicking is disabled on this page.");
-    }
-    
-    // Attach the showAlert function to the contextmenu event
-    document.addEventListener("contextmenu", showAlert);
-</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>About Smart City Guide</title>
@@ -20,22 +9,61 @@
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #F8F0E5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
   }
+
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #f0f8ff, #87ceeb);
+    animation: backgroundCycle 3s infinite linear;
+  }
+
   .container {
     max-width: 960px;
-    margin: 0 auto;
     padding: 40px;
-    background-color: #EADBC8;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    animation: bounce 2s infinite;
+    /* From https://css.glass */
+background: rgba(255, 255, 255, 0);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(7.9px);
+-webkit-backdrop-filter: blur(7.9px);
+border: 1px solid rgba(255, 255, 255, 0.17);
   }
+
   h1 {
     color: #102C57;
   }
+
   p {
     color: #555;
     line-height: 1.6;
+  }
+
+  @keyframes backgroundCycle {
+    0% {
+      background-position: 0% 0;
+    }
+    100% {
+      background-position: 100% 100%;
+    }
+  }
+
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-3px);
+    }
   }
 </style>
 </head>

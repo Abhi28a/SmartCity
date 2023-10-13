@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.css"rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+<style>
+  
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+  html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.logo {
+  width: 150px;
+  height: auto;
+}
+
+
+.navbar-scroll .nav-link,
+.navbar-scroll .fa-bars {
+  color: #7f4722;
+}
+
+.navbar-scrolled .nav-link,
+.navbar-scrolled .fa-bars {
+  color: #7f4722;
+}
+
+.navbar-scrolled {
+  background-color: #ffede7;
+}
+
+.ad-block {
+    padding: 50px;
+    font-size: 206px; /* Adjust the font size */
+    font-weight: 700; /* Add font-weight (bold) */
+    color: transparent; /* Make the text transparent */
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide the overflow text */
+}
+
+.marquee { /* Right to Left */
+    display: flex;
+    color: #6A9C89;
+    -webkit-text-stroke: 1px #ffede7;
+    animation: marquee-right 6s linear infinite; /* Adjust the speed as needed */
+}
+
+.marquee2 { /* Left to Right */
+    display: flex;
+    -webkit-text-stroke: 1px #b35d5d;
+    animation: marquee-left 6s linear infinite; /* Adjust the speed as needed */
+}
+
+@keyframes marquee-right {
+    0% {
+        transform: translateX(100%); /* Start off-screen to the right */
+    }
+    100% {
+        transform: translateX(-100%); /* Move off-screen to the left */
+    }
+}
+
+@keyframes marquee-left {
+    0% {
+        transform: translateX(-100%); /* Start off-screen to the left */
+    }
+    100% {
+        transform: translateX(100%); /* Move off-screen to the right */
+    }
+}
+/* services */
+
+.servicecontainer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 100px 50px;
+    padding: 100px 50px;
+}
+
+.servicecontainer .servicecard {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 350px;
+    max-width: 100%;
+    height: 300px;
+    background: white;
+    border-radius: 20px;
+    transition: 0.5s;
+    box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
+}
+
+.servicecontainer .servicecard:hover {
+    height: 400px;
+}
+
+.servicecontainer .servicecard .serviceimg-box {
+    position: absolute;
+    top: 20px;
+    width: 300px;
+    height: 220px;
+    background: #000000;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.servicecontainer .servicecard:hover .serviceimg-box {
+    top: -100px;
+    scale: 0.75;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+}
+
+.servicecontainer .servicecard .serviceimg-box img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.servicecontainer .servicecard .servicecontent {
+    position: absolute;
+    top: 252px;
+    width: 100%;
+    height: 40px;
+    padding: 0 30px;
+    text-align: center;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.servicecontainer .servicecard:hover .servicecontent {
+    top: 130px;
+    height: 250px;
+}
+
+.servicecontainer .servicecard .servicecontent h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--clr);
+}
+
+.servicecontainer .servicecard .servicecontent p {
+    color: #333;
+}
+
+.servicecontainer .servicecard .servicecontent a {
+    position: relative;
+    top: 15px;
+    display: inline-block;
+    padding: 12px 25px;
+    text-decoration: none;
+    background: var(--clr);
+    color: white;
+    font-weight: 500;
+}
+
+.servicecontainer .servicecard .servicecontent a:hover {
+    opacity: 0.8;
+    background-color: #000000;
+    color: aqua;
+}
+
+@media (max-width: 480px) {
+    .servicecontainer .servicecard {
+        width: 230px;
+        border-radius: 15px;
+    }
+
+    .servicecontainer .servicecard .serviceimg-box {
+        width: 185px;
+        border-radius: 10px;
+    }
+
+    .servicecontainer .servicecard .servicecontent p {
+        font-size: 0.8rem;
+    }
+
+    .servicecontainer .servicecard .servicecontent a {
+        font-size: 0.9rem;
+    }
+}
+
+/*--------------------------------------------------------------
+# Sections General
+--------------------------------------------------------------*/
+section {
+  padding: 100px 0;
+  overflow: hidden;
+}
+
+.section-bg {
+  background-color: #f9f8ff;
+}
+
+.section-title {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.section-title h2 {
+  font-size: 32px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 3px;
+  padding-bottom: 10px;
+  position: relative;
+}
+
+.section-title h2::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #5846f9;
+  bottom: 0;
+  left: calc(50% - 25px);
+}
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top navbar-scroll shadow-0" style="background-color: #fff;transition: background-color 0.3s;">
+        <div class="container">
+            <img class="logo" src="logo.png"/>
+            <button class="navbar-toggler ps-0" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarExample01" aria-controls="navbarExample01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="d-flex justify-content-start align-items-center">
+        <i class="fas fa-bars"></i>
+      </span>
+    </button>
+            <div class="collapse navbar-collapse" id="navbarExample01">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item active">
+                        <a class="nav-link px-3" href="#!">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3" href="../old_base/about.html">about us</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link px-3" href="#!">contact us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3" href="login.html">Login</a>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav flex-row">
+                    <li class="nav-item">
+                        <a class="nav-link px-3" href="#!">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link ps-3" href="#!">
+            <i class="fab fa-instagram"></i>
+          </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- hero -->
+    <div class="hero-container" style="background-color: transparent;margin-top: 100px;">
+      <div class="container">
+          <!-- Hero Section -->
+          <div class="row align-items-center no-gutters">
+              <div class="col-xl-5 col-lg-6 col-md-12">
+                  <div class="py-5 py-lg-0">
+                      <h1 class="text-black display-4 fw-bold">SmartCity</h1>
+                      <p class="text-black-50 mb-4 lead">
+                        Experience the future of urban living, where technology and innovation converge to create a smarter, greener, and more connected city.                    </p>
+                      <a href="" class="btn btn-success">Explore City</a>
+                      <!-- <a href="" class="btn btn-white">Are You Instructor?</a> -->
+                  </div>
+              </div>
+              <div class=" col-xl-7 col-lg-6 col-md-12 text-lg-right text-center">
+                  <img src="hero.svg" alt="" class="img-fluid">
+              </div>
+          </div>
+      </div>
+     </div>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  
+     <!-- AD -->
+    <div class="ad-block">
+      <div class="marquee">Embark on an exploration of the city's offerings</div>
+      <div class="ad-block">
+          <div class="marquee2">A singular, comprehensive destination for city exploration</div>
+      </div>
+  </div>
+<!-- services -->
+<div class="section-title" id="services">
+    <h2>Our Services</h2>
+  </div>
+<div class="servicecontainer">
+  <div class="servicecard" style="--clr: #7f4722">
+      <div class="serviceimg-box">
+          <img
+              src="tour.gif">
+      </div>
+      <div class="servicecontent">
+          <h2>Tourism</h2>
+          <p>
+            A comprehensive guide to places and attractions in the domain
+          </p>
+          <a href="">Read More</a>
+      </div>
+  </div>
+
+  <div class="servicecard" style="--clr: #7f4722">
+      <div class="serviceimg-box">
+          <img
+              src="hotel.gif">
+      </div>
+      <div class="servicecontent">
+          <h2>Hotels and Hospitality</h2>
+          <p>
+            Details of hotels in the city
+          </p>
+          <a href="golconda_fort.html">Read More</a>
+      </div>
+  </div>
+
+  <div class="servicecard" style="--clr: #7f4722">
+      <div class="serviceimg-box">
+          <img
+              src="jobs.gif">
+      </div>
+      <div class="servicecontent">
+          <h2>Jobs</h2>
+          <p>
+            Up-to-date job opportunities information
+          </p>
+          <a href=".html">Read More</a>
+      </div>
+      
+  </div>
+
+  <div class="servicecard" style="--clr: #7f4722">
+    <div class="serviceimg-box">
+        <img
+            src="housing.gif">
+    </div>
+    <div class="servicecontent">
+        <h2>Housing</h2>
+        <p>
+            Information about rental houses
+        </p>
+        <a href=".html">Read More</a>
+    </div>
+    
+</div>
+
+<div class="servicecard" style="--clr: #7f4722">
+    <div class="serviceimg-box">
+        <img
+            src="enterinment.gif">
+    </div>
+    <div class="servicecontent">
+        <h2>Entertainment</h2>
+        <p>
+            Comprehensive details of entertainment options
+        </p>
+        <a href=".html">Read More</a>
+    </div>
+    
+</div>
+
+<div class="servicecard" style="--clr: #7f4722">
+    <div class="serviceimg-box">
+        <img
+            src="">
+    </div>
+    <div class="servicecontent">
+        <h2>Education</h2>
+        <p>
+            Listings of schools, colleges, and universities
+        </p>
+        <a href=".html">Read More</a>
+    </div>
+    
+</div>
+
+<div class="servicecard" style="--clr: #7f4722">
+    <div class="serviceimg-box">
+        <img
+            src="">
+    </div>
+    <div class="servicecontent">
+        <h2>Hospital</h2>
+        <p>
+            Information on hospitals of all categories
+        </p>
+        <a href=".html">Read More</a>
+    </div>
+    
+</div>
+
+<div class="servicecard" style="--clr: #7f4722">
+    <div class="serviceimg-box">
+        <img
+            src="rentals.gif">
+    </div>
+    <div class="servicecontent">
+        <h2>Rentals</h2>
+        <p>
+            Details of automobile rental places
+        </p>
+        <a href=".html">Read More</a>
+    </div>
+    
+</div>
+
+<div class="servicecard" style="--clr: #7f4722">
+    <div class="serviceimg-box">
+        <img
+            src="">
+    </div>
+    <div class="servicecontent">
+        <h2>Emergency helpline</h2>
+        <p>
+            Helplines for various city services and domains
+        </p>
+        <a href=".html">Read More</a>
+    </div>
+    
+</div>
+</div>
+
+
+    <!-- CTA -->
+    <section class="py-lg-10">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-10 offset-xl-1 col-md-12 col-12">
+            <div class="bg py-6 px-6 px-xl-0 rounded-9 ">
+              <div class="row align-items-center">
+                <div class="offset-xl-1 col-xl-5 col-md-6 col-12">
+                  <div>
+                    <h2 class="h1 text-black mb-3">Let’s Have The Access Over City!</h2>
+                    <p class="text-black fs-4">…and this will be a revolutionary one stop Destination for the city!</p>
+                    <button class="btn btn-dark">Start Exploring</button>
+                  </div>
+                </div>
+                <div class="col-xl-6 col-md-6 col-12">
+                  <div class="text-center">
+                    <img src="af.gif" alt="learning" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <hr>
+    <!-- footer -->
+<footer class="pt-5 pb-3">
+  <div class="container">
+     <div class="row  justify-content-center text-center  align-items-center ">
+        <div class="col-12 col-md-12 col-xxl-6 px-0 ">
+           <div class="mb-4">
+              <a href="../index.html"><img src="logo.png" style="width: 150px ;height: auto;" class="mb-4"></a>
+              <p class="lead">SmartCity is an one-stop Destination to access all the facilites in the city.
+              </p>
+           </div>
+           <nav class="nav nav-footer justify-content-center">
+              <a class="nav-link" href="#">About</a>
+              <span class="my-2 vr opacity-50"></span>
+              <a class="nav-link" href="#">Careers </a>
+              <span class="my-2 vr opacity-50"></span>
+              <a class="nav-link" href="#">Contact</a>
+              <span class="my-2 vr opacity-50"></span>
+              <a class="nav-link" href="#">Pricing</a>
+              <span class="my-2 vr opacity-50"></span>
+              <a class="nav-link" href="#">Blog</a>
+              <span class="my-2 vr opacity-50"></span>
+              <a class="nav-link" href="#">Help</a>
+              <span class="my-2 vr opacity-50"></span>
+              <a class="nav-link" href="#">Investors</a>
+           </nav>
+        </div>
+     </div>
+     <!-- Desc -->
+     <hr class="mt-6 mb-3">
+     <div class="row align-items-center">
+        <!-- Desc -->
+        <div class="col-lg-3 col-md-6 col-12">
+           <span>
+              ©
+              <span id="copyright">
+                 <script>
+                    document.getElementById('copyright').appendChild(document.createTextNode(new Date()
+                        .getFullYear()))
+                 </script>
+              </span>
+              SmartCity, All Rights Reserved
+           </span>
+        </div>
+        <!-- Links -->
+        <div class="col-12 col-md-6 col-lg-7 d-lg-flex justify-content-center">
+           <nav class="nav nav-footer">
+              <a class="nav-link ps-0" href="#">Privacy Policy</a>
+              <a class="nav-link px-2 px-md-0" href="#">Cookie Notice </a>
+              <a class="nav-link" href="#">Terms of Use</a>
+           </nav>
+        </div>
+        <div class="col-lg-2 col-md-12 col-12 d-lg-flex justify-content-end">
+           <div class="">
+              <!--Facebook-->
+              <a href="#" class="text-muted me-2">
+              <i class="mdi mdi-facebook fs-3"></i>
+              </a>
+              <!--Twitter-->
+              <a href="#" class="text-muted me-2">
+              <i class="mdi mdi-twitter  fs-3"></i>
+              </a>
+              <!--GitHub-->
+              <a href="#" class="text-muted">
+              <i class="mdi mdi-github fs-3"></i>
+              </a>
+           </div>
+        </div>
+     </div>
+     <!-- Links -->
+  </div>
+ </footer>
+     <!-- MDB -->
+<script type="text/javascript"src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.js"></script>
+</body>
+
+</html>
