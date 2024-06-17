@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Smart City Guide</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #f0f8ff, #87ceeb);
+    animation: backgroundCycle 3s infinite linear;
+  }
+
+  .container {
+    max-width: 960px;
+    padding: 40px;
+    animation: bounce 2s infinite;
+    /* From https://css.glass */
+background: rgba(255, 255, 255, 0);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(7.9px);
+-webkit-backdrop-filter: blur(7.9px);
+border: 1px solid rgba(255, 255, 255, 0.17);
+  }
+
+  h1 {
+    color: #102C57;
+  }
+
+  p {
+    color: #555;
+    line-height: 1.6;
+  }
+
+  @keyframes backgroundCycle {
+    0% {
+      background-position: 0% 0;
+    }
+    100% {
+      background-position: 100% 100%;
+    }
+  }
+
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-3px);
+    }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>About Smart City Guide</h1>
+  <p>Cities and urban areas are hubs of opportunity, attracting a diverse influx of people from every corner in search of better lives, education, and employment prospects. The initial days after relocating to a new city can be daunting, as newcomers navigate unfamiliar territory, unaware of the essential facilities, attractions, and services available to them.</p>
+  
+  <p>The visionary Smart City project addresses this challenge by creating a comprehensive and integrated platform that houses vital information to serve as a guiding beacon for those who have recently arrived in the city. This innovative application serves as a one-stop solution, offering a wealth of information tailored to the needs of visitors, students, and job seekers alike.</p>
+  
+  <p>From facilitating hotel accommodations and rental services to providing insights into transportation options, healthcare facilities, and even assisting in airline ticket bookings, the Smart City Guide covers every facet of urban living. Navigating the city's landscape is made seamless with information on prominent shopping landmarks, emergency helplines, and more, ensuring individuals have access to all necessary details as they embark on their new journey.</p>
+  
+  <p>Accessible through the internet, users can easily connect to the Smart City Guide application and explore its web pages, each dedicated to different aspects of city life. The convenience of this digital resource empowers users to access crucial information at their fingertips, enhancing their ability to seamlessly traverse and acclimate to their new urban environment.</p>
+</div>
+</body>
+</html>

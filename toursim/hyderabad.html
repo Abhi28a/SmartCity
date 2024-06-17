@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>SmartCity</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #FEF9EF;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 100px 50px;
+    padding: 100px 50px;
+}
+
+.container .card {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 350px;
+    max-width: 100%;
+    height: 300px;
+    background: white;
+    border-radius: 20px;
+    transition: 0.5s;
+    box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
+}
+
+.container .card:hover {
+    height: 400px;
+}
+
+.container .card .img-box {
+    position: absolute;
+    top: 20px;
+    width: 300px;
+    height: 220px;
+    background: #000000;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.container .card:hover .img-box {
+    top: -100px;
+    scale: 0.75;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+}
+
+.container .card .img-box img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container .card .content {
+    position: absolute;
+    top: 252px;
+    width: 100%;
+    height: 35px;
+    padding: 0 30px;
+    text-align: center;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.container .card:hover .content {
+    top: 130px;
+    height: 250px;
+}
+
+.container .card .content h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--clr);
+}
+
+.container .card .content p {
+    color: #333;
+}
+
+.container .card .content a {
+    position: relative;
+    top: 15px;
+    display: inline-block;
+    padding: 12px 25px;
+    text-decoration: none;
+    background: var(--clr);
+    color: white;
+    font-weight: 500;
+}
+
+.container .card .content a:hover {
+    opacity: 0.8;
+    background-color: #000000;
+    color: aqua;
+}
+
+@media (max-width: 480px) {
+    .container .card {
+        width: 230px;
+        border-radius: 15px;
+    }
+
+    .container .card .img-box {
+        width: 185px;
+        border-radius: 10px;
+    }
+
+    .container .card .content p {
+        font-size: 0.8rem;
+    }
+
+    .container .card .content a {
+        font-size: 0.9rem;
+    }
+}
+
+    </style>
+</head>
+
+    <body>
+        <div class="container">
+            <div class="card" style="--clr: #FF865E">
+                <div class="img-box">
+                    <img
+                        src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/12/f3/ad/1a/filmi-duniya.jpg?w=700&h=500&s=1">
+                </div>
+                <div class="content">
+                    <h2>Ramoji Film City</h2>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                        Architecto, hic? Magnam eum error saepe doloribus corrupti
+                        repellat quisquam alias doloremque!
+                    </p>
+                    <a href="./hyderabad/ramoji_film_city.html">Read More</a>
+                </div>
+            </div>
+
+            <div class="card" style="--clr: #FF865E">
+                <div class="img-box">
+                    <img
+                        src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/05/a3/62/98/golkonda-fort.jpg?w=1000&h=800&s=1">
+                </div>
+                <div class="content">
+                    <h2>Golconda Fort</h2>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                        Architecto, hic? Magnam eum error saepe doloribus corrupti
+                        repellat quisquam alias doloremque!
+                    </p>
+                    <a href="./hyderabad/golconda_fort.html">Read More</a>
+                </div>
+            </div>
+
+            <div class="card" style="--clr: #FF865E">
+                <div class="img-box">
+                    <img
+                        src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/56/ff/7a/photo0jpg.jpg?w=600&h=500&s=1">
+                </div>
+                <div class="content">
+                    <h2>Birla Mandir</h2>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                        Architecto, hic? Magnam eum error saepe doloribus corrupti
+                        repellat quisquam alias doloremque!
+                    </p>
+                    <a href="./hyderabad/birla_mandir.html">Read More</a>
+                </div>
+            </div>
+
+            <div class="card" style="--clr: #FF865E">
+                <div class="img-box">
+                    <img
+                        src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/14/c8/76/98/one-of-best-stay-anywhere.jpg?w=1000&h=800&s=1">
+                </div>
+                <div class="content">
+                    <h2>Taj Falaknuma Palace</h2>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                        Architecto, hic? Magnam eum error saepe doloribus corrupti
+                        repellat quisquam alias doloremque!
+                    </p>
+                    <a href="./hyderabad/Taj Falaknuma Palace.html">Read More</a>
+                </div>
+            </div>
+
+            <div class="card" style="--clr: #FF865E">
+                <div class="img-box">
+                    <img
+                        src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/a1/66/09/photo3jpg.jpg?w=1000&h=-1&s=1">
+                </div>
+                <div class="content">
+                    <h2>Salar Jung Museum</h2>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                        Architecto, hic? Magnam eum error saepe doloribus corrupti
+                        repellat quisquam alias doloremque!
+                    </p>
+                    <a href="./hyderabad/Salar Jung Museum.html">Read More</a>
+                </div>
+            </div>
+
+            <div class="card" style="--clr: #FF865E">
+                <div class="img-box">
+                    <img
+                        src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/24/16/f5/img-20180601-184619-largejpg.jpg?w=1000&h=-1&s=1">
+                </div>
+                <div class="content">
+                    <h2>Charminar</h2>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                        Architecto, hic? Magnam eum error saepe doloribus corrupti
+                        repellat quisquam alias doloremque!
+                    </p>
+                    <a href="./hyderabad/Charminar.html">Read More</a>
+                </div>
+            </div>
+
+            <div class="card" style="--clr: #FF865E">
+                <div class="img-box">
+                    <img
+                        src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/03/3a/96/42/chowmahalla-palace.jpg?w=600&h=-1&s=1">
+                </div>
+                <div class="content">
+                    <h2>Chowmahalla Palace</h2>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                        Architecto, hic? Magnam eum error saepe doloribus corrupti
+                        repellat quisquam alias doloremque!
+                    </p>
+                    <a href="./hyderabad/Chowmahalla Palace.html">Read More</a>
+                </div>
+            </div>
+            <div class="card" style="--clr: #FF865E">
+                <div class="img-box">
+                    <img
+                        src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/12/43/79/39/the-gleaming-temple.jpg?w=1000&h=-1&s=1">
+                </div>
+                <div class="content">
+                    <h2>Shri Jagannath Temple</h2>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                        Architecto, hic? Magnam eum error saepe doloribus corrupti
+                        repellat quisquam alias doloremque!
+                    </p>
+                    <a href="./hyderabad/Shri Jagannath Temple.html">Read More</a>
+                </div>
+            </div>
+            <div class="card" style="--clr: #FF865E">
+                <div class="img-box">
+                    <img
+                        src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/11/86/b3/ae/adorable-place.jpg?w=800&h=-1&s=1">
+                </div>
+                <div class="content">
+                    <h2>Chilkur Balaji Temple</h2>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                        Architecto, hic? Magnam eum error saepe doloribus corrupti
+                        repellat quisquam alias doloremque!
+                    </p>
+                    <a href="./hyderabad/Chilkur Balaji Temple.html">Read More</a>
+                </div>
+            </div>
+            <div class="card" style="--clr: #FF865E">
+                <div class="img-box">
+                    <img
+                        src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/b4/a5/6d/get-closer-with-your.jpg?w=1000&h=-1&s=1">
+                </div>
+                <div class="content">
+                    <h2>Wonderla</h2>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                        Architecto, hic? Magnam eum error saepe doloribus corrupti
+                        repellat quisquam alias doloremque!
+                    </p>
+                    <a href="./hyderabad/Wonderla.html">Read More</a>
+                </div>
+            </div>
+            <div class="card" style="--clr: #FF865E">
+                <div class="img-box">
+                    <img
+                        src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/51/16/34/nehru-zoological-park.jpg?w=1000&h=-1&s=1">
+                </div>
+                <div class="content">
+                    <h2>Nehru Zoological Park</h2>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                        Architecto, hic? Magnam eum error saepe doloribus corrupti
+                        repellat quisquam alias doloremque!
+                    </p>
+                    <a href="./hyderabad/Nehru Zoological Park.html">Read More</a>
+                </div>
+            </div>
+            <div class="card" style="--clr: #FF865E">
+                <div class="img-box">
+                    <img
+                        src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/07/fa/0f/6b/buddha-statue.jpg?w=1000&h=-1&s=1">
+                </div>
+                <div class="content">
+                    <h2>Buddha Statue</h2>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                        Architecto, hic? Magnam eum error saepe doloribus corrupti
+                        repellat quisquam alias doloremque!
+                    </p>
+                    <a href="./hyderabad/Buddha Statue.html">Read More</a>
+                </div>
+            </div>
+            <div class="card" style="--clr: #FF865E">
+                <div class="img-box">
+                    <img
+                        src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/06/19/55/ff/entrance-gate-of-shilparama.jpg?w=1000&h=800&s=1">
+                </div>
+                <div class="content">
+                    <h2>Shilparamam Cultural Society</h2>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                        Architecto, hic? Magnam eum error saepe doloribus corrupti
+                        repellat quisquam alias doloremque!
+                    </p>
+                    <a href="./hyderabad/Shilparamam Cultural Society.html">Read More</a>
+                </div>
+            </div>
+            <div class="card" style="--clr: #FF865E">
+                <div class="img-box">
+                    <img
+                        src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/08/17/d3/bc/boat-fun.jpg?w=1000&h=800&s=1">
+                </div>
+                <div class="content">
+                    <h2>Hussian Sagar</h2>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                        Architecto, hic? Magnam eum error saepe doloribus corrupti
+                        repellat quisquam alias doloremque!
+                    </p>
+                    <a href="./hyderabad/Hussian Sagar.html">Read More</a>
+                </div>
+            </div>
+            
+            
+        </div>
+
+
+    </body>
+
+</html>

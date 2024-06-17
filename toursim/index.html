@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>
+        // Function to show an alert when the user right-clicks
+        function showAlert(event) {
+            event.preventDefault(); // Prevent the default context menu
+            alert("Right-clicking is disabled on this page.");
+        }
+        
+        // Attach the showAlert function to the contextmenu event
+        document.addEventListener("contextmenu", showAlert);
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Navbar Example</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <style type="text/css">
+      body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: #333; /* Change this to your desired background color */
+    padding: 10px;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: #FFF; /* Change this to your desired text color */
+    margin: 0 15px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-item:hover {
+    background-color: #EADBC8; /* Change this to your desired hover color */
+    color: #102C57;
+}
+.hero-image {
+            width: 100%;
+            height: 100vh;
+            background-image: url('https://images.unsplash.com/photo-1533587851505-d119e13fa0d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+            text-align: center;
+        }
+        .hero-content {
+            max-width: 800px;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+        }
+        h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .btn-container {
+            margin-top: 20px;
+        }
+        .b {
+            padding: 10px 20px;
+            background-color: #333;
+            color: #FFF;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .b:hover {
+            background-color: #EADBC8; /* Change this to your desired hover color */
+            color: #102C57;
+        }
+.icon-boxes {
+      padding: 80px 0;
+      background-color: #F6F4EB; /* Updated background color */
+    }
+
+    .icon-box {
+      position: relative; /* Added position property */
+      background: #91C8E4; /* Updated background color */
+      border-radius: 10px;
+      box-shadow: 0px 0px 20px rgba(78, 78, 78, 0.2); /* Adjusted box-shadow */
+      padding: 30px;
+      transition: all 0.4s ease-in-out;
+    }
+
+    /* Apply hover and floating effect to icon-box on hover */
+    .icon-box:hover {
+      transform: scale(1.05); /* Zoom effect */
+      z-index: 2; /* Bring to front */
+      box-shadow: 0px 0px 40px rgba(78, 78, 78, 0.4); /* Enhanced shadow on hover */
+    }
+
+    .icon img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px; /* Rounded corners for rectangular shape */
+      transition: background 0.4s;
+    }
+
+    .title {
+      font-size: 24px;
+      font-weight: 700;
+      margin-top: 20px;
+      color: #749BC2; /* Updated title color */
+    }
+
+    .description {
+      font-size: 14px;
+      line-height: 24px;
+      margin-top: 15px;
+      color: #749BC2; /* Updated description color */
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 25px;
+      background: #DAC0A3; /* Updated button background color */
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.4s;
+    }
+
+    .button:hover {
+      background: #BA9C7A; /* Adjusted hover color */
+    }
+
+    /* Media Queries */
+    @media (max-width: 992px) {
+      .icon-boxes {
+        padding: 60px 0;
+      }
+
+      .icon-box {
+        margin-bottom: 30px;
+      }
+    }
+    .icon-boxes {
+      padding: 80px 0;
+      background-color: #F8F0E5; /* Updated background color */
+    }
+
+    .icon-box {
+      position: relative; /* Added position property */
+      background: #EADBC8; /* Updated background color */
+      border-radius: 10px;
+      box-shadow: 0px 0px 20px rgba(78, 78, 78, 0.2); /* Adjusted box-shadow */
+      padding: 30px;
+      transition: all 0.4s ease-in-out;
+    }
+
+    /* Apply hover and floating effect to icon-box on hover */
+    .icon-box:hover {
+      transform: scale(1.05); /* Zoom effect */
+      z-index: 2; /* Bring to front */
+      box-shadow: 0px 0px 40px rgba(78, 78, 78, 0.4); /* Enhanced shadow on hover */
+    }
+
+    .icon img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px; /* Rounded corners for rectangular shape */
+      transition: background 0.4s;
+    }
+
+    .title {
+      font-size: 24px;
+      font-weight: 700;
+      margin-top: 20px;
+      color: #102C57; /* Updated title color */
+    }
+
+    .description {
+      font-size: 14px;
+      line-height: 24px;
+      margin-top: 15px;
+      color: #102C57; /* Updated description color */
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 25px;
+      background: #DAC0A3; /* Updated button background color */
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.4s;
+    }
+
+    .button:hover {
+      background: #BA9C7A; /* Adjusted hover color */
+    }
+
+    /* Media Queries */
+    @media (max-width: 992px) {
+      .icon-boxes {
+        padding: 60px 0;
+      }
+
+      .icon-box {
+        margin-bottom: 30px;
+      }
+    }
+/*--------------------------------------------------------------
+# Contact
+--------------------------------------------------------------*/
+.contact .info-box {
+  color: #444444;
+  text-align: center;
+  box-shadow: 0 0 30px rgba(214, 215, 216, 0.6);
+  padding: 20px 0 30px 0;
+  background: #fff;
+}
+
+.contact .info-box i {
+  font-size: 32px;
+  color: #5846f9;
+  border-radius: 50%;
+  padding: 8px;
+}
+
+.contact .info-box h3 {
+  font-size: 20px;
+  color: #2c4964;
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+.contact .info-box p {
+  padding: 0;
+  line-height: 24px;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+.contact .php-email-form {
+  box-shadow: 0 0 30px rgba(214, 215, 216, 0.6);
+  padding: 30px;
+  background: #fff;
+}
+
+.contact .php-email-form .error-message {
+  display: none;
+  color: #fff;
+  background: #ed3c0d;
+  text-align: left;
+  padding: 15px;
+  font-weight: 600;
+}
+
+.contact .php-email-form .error-message br+br {
+  margin-top: 25px;
+}
+
+.contact .php-email-form .sent-message {
+  display: none;
+  color: #fff;
+  background: #18d26e;
+  text-align: center;
+  padding: 15px;
+  font-weight: 600;
+}
+
+.contact .php-email-form .loading {
+  display: none;
+  background: #fff;
+  text-align: center;
+  padding: 15px;
+}
+
+.contact .php-email-form .loading:before {
+  content: "";
+  display: inline-block;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  margin: 0 10px -6px 0;
+  border: 3px solid #18d26e;
+  border-top-color: #eee;
+  animation: animate-loading 1s linear infinite;
+}
+
+.contact .php-email-form input,
+.contact .php-email-form textarea {
+  border-radius: 5px;
+  box-shadow: none;
+  font-size: 14px;
+}
+
+.contact .php-email-form input:focus,
+.contact .php-email-form textarea:focus {
+  border-color: #5846f9;
+}
+
+.contact .php-email-form input {
+  padding: 10px 15px;
+}
+
+.contact .php-email-form textarea {
+  padding: 12px 15px;
+}
+
+.contact .php-email-form button[type=submit] {
+  background: #5846f9;
+  border: 0;
+  padding: 10px 24px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 5px;
+}
+
+.contact .php-email-form button[type=submit]:hover {
+  background: #7b27d8;
+}
+
+@keyframes animate-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+    #footer {
+  color: #fff;
+  font-size: 14px;
+  background: linear-gradient(45deg, #333 0%, #333 100%);
+  background-size: cover;
+}
+
+#footer .footer-top {
+  padding: 60px 0 30px 0;
+  position: relative;
+}
+
+#footer .footer-top .footer-contact {
+  margin-bottom: 30px;
+}
+
+#footer .footer-top .footer-contact h3 {
+  font-size: 28px;
+  margin: 0 0 30px 0;
+  padding: 2px 0 2px 0;
+  line-height: 1;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+#footer .footer-top .footer-contact p {
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+#footer .footer-top h4 {
+  font-size: 16px;
+  font-weight: bold;
+  position: relative;
+  padding-bottom: 12px;
+}
+
+#footer .footer-top .footer-links {
+  margin-bottom: 30px;
+}
+
+#footer .footer-top .footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#footer .footer-top .footer-links ul i {
+  padding-right: 2px;
+  color: #fff;
+  font-size: 18px;
+  line-height: 1;
+}
+
+#footer .footer-top .footer-links ul li {
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+#footer .footer-top .footer-links ul li:first-child {
+  padding-top: 0;
+}
+
+#footer .footer-top .footer-links ul a {
+  color: rgba(255, 255, 255, 0.8);
+  transition: 0.3s;
+  display: inline-block;
+  line-height: 1;
+}
+
+#footer .footer-top .footer-links ul a:hover {
+  text-decoration: underline;
+  color: #fff;
+}
+
+#footer .footer-newsletter {
+  font-size: 15px;
+}
+
+#footer .footer-newsletter h4 {
+  font-size: 16px;
+  font-weight: bold;
+  position: relative;
+  padding-bottom: 12px;
+}
+
+#footer .footer-newsletter form {
+  margin-top: 30px;
+  background: #fff;
+  padding: 6px 10px;
+  position: relative;
+  border-radius: 5px;
+  text-align: left;
+  border: 1px solid white;
+}
+
+#footer .footer-newsletter form input[type=email] {
+  border: 0;
+  padding: 4px 8px;
+  width: calc(100% - 100px);
+}
+
+#footer .footer-newsletter form input[type=submit] {
+  position: absolute;
+  top: -1px;
+  right: -2px;
+  bottom: -1px;
+  border: 0;
+  background: none;
+  font-size: 16px;
+  padding: 0 20px;
+  background: rgba(123, 39, 216, 0.8);
+  color: #fff;
+  transition: 0.3s;
+  border-radius: 0 5px 5px 0;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+#footer .footer-newsletter form input[type=submit]:hover {
+  background: #EADBC8;
+}
+
+#footer .copyright-wrap {
+  border-top: 1px solid #8577fb;
+}
+
+#footer .social-links a {
+  font-size: 18px;
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  line-height: 1;
+  padding: 8px 0;
+  margin-right: 4px;
+  border-radius: 50%;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+}
+
+#footer .social-links a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  text-decoration: none;
+}
+  </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="tourism.html" class="nav-item">Home</a>
+        <a href="#" class="nav-item">Destination</a>
+        <a href="feedback.html" class="nav-item">Feedback</a>
+        <a href="todo.html" class="nav-item">Bucket List</a>
+    </div>
+  
+  <div class="hero-image">
+        <div class="hero-content">
+            <h1>Welcome to the SmartCityX Tourism </h1>
+            <p>Experience the future of urban living, where technology and innovation converge to create a smarter, greener, and more connected city.</p>
+            <div class="btn-container">
+                <a href="#" class="b">Get Involved</a>
+            </div>
+        </div>
+    </div>
+
+  <section id="icon-boxes" class="icon-boxes">
+    <div class="container">
+      <div class="row">
+        <!-- Apply hover and floating effect to this element -->
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up">
+          <div class="icon-box">
+            <div class="icon"><img src="https://images.unsplash.com/photo-1551161242-b5af797b7233?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aHlkZXJhYmFkfGVufDB8fDB8fHww&auto=format&fit=crop&w=900&q=60" alt="Image 1"></div>
+            <h4 class="title">Telengana</h4>
+            <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati
+              cupiditate non provident</p>
+            <a href="hyderabad.html"><button class="button">Explore</button></a>
+          </div>
+        </div>
+        <!-- Repeat the above structure for other icon-boxes -->
+
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up">
+          <div class="icon-box">
+            <div class="icon"><img src="https://images.unsplash.com/photo-1572333837703-3f5d7a24c714?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YW5kaHJhJTIwcHJhZGVzaHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=900&q=60" alt="Image 1"></div>
+            <h4 class="title">Andhra Pradesh</h4>
+            <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati
+              cupiditate non provident</p>
+            <a href="andhra.html"><button class="button">Explore</button></a>
+          </div>
+        </div>
+        <!-- Repeat the above structure for other icon-boxes -->
+
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up">
+          <div class="icon-box">
+            <div class="icon"><img src="https://plus.unsplash.com/premium_photo-1661915320026-84ca2c96faa7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8a2FybmF0YWthJTIwdG91cmlzbXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=900&q=60" alt="Image 1"></div>
+            <h4 class="title">Karnataka</h4>
+            <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati
+              cupiditate non provident</p>
+            <a href="karnataka.html"><button class="button">Explore</button></a>
+          </div>
+        </div>
+        <!-- Repeat the above structure for other icon-boxes -->
+
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up">
+          <div class="icon-box">
+            <div class="icon"><img src="https://plus.unsplash.com/premium_photo-1661906030622-5fa07173129c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZGVsaGklMjB0b3VyaXNtfGVufDB8fDB8fHww&auto=format&fit=crop&w=900&q=60" alt="Image 1"></div>
+            <h4 class="title">Delhi</h4>
+            <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati
+              cupiditate non provident</p>
+            <a href="delhi.html"><button class="button">Explore</button></a>
+          </div>
+        </div>
+        <!-- Repeat the above structure for other icon-boxes -->
+
+      </div>
+
+      <br>
+      <!-- second row  -->
+
+      <div class="row">
+        <!-- Apply hover and floating effect to this element -->
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up">
+          <div class="icon-box">
+            <div class="icon"><img src="https://plus.unsplash.com/premium_photo-1661902264812-77019190be30?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8a2FzaG1pciUyMHRvdXJpc218ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=900&q=60" alt="Image 1"></div>
+            <h4 class="title">Kashmir</h4>
+            <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati
+              cupiditate non provident</p>
+            <a href="kashmir.html"><button class="button">Explore</button></a>
+          </div>
+        </div>
+        <!-- Repeat the above structure for other icon-boxes -->
+
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up">
+          <div class="icon-box">
+            <div class="icon"><img src="https://images.unsplash.com/photo-1664719877542-93ffa163d428?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGd1amFyYXQlMjB0b3VyaXNtfGVufDB8fDB8fHww&auto=format&fit=crop&w=900&q=60" alt="Image 1"></div>
+            <h4 class="title">Gujarat</h4>
+            <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati
+              cupiditate non provident</p>
+            <a href="gujarat.html"><button class="button">Explore</button></a>
+          </div>
+        </div>
+        <!-- Repeat the above structure for other icon-boxes -->
+
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up">
+          <div class="icon-box">
+            <div class="icon"><img src="https://images.unsplash.com/photo-1614090699960-b4c81be49f3c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8a2VyYWxhJTIwdG91cmlzbXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=900&q=60" alt="Image 1"></div>
+            <h4 class="title">Kerala</h4>
+            <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati
+              cupiditate non provident</p>
+            <a href="kerala.html"><button class="button">Explore</button></a>
+          </div>
+        </div>
+        <!-- Repeat the above structure for other icon-boxes -->
+
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up">
+          <div class="icon-box">
+            <div class="icon"><img src="https://media.istockphoto.com/id/808900036/photo/detail-work-in-gopuram-hindu-temple-kapaleeshwarar-chennai-tamil-nadu-india.webp?b=1&s=170667a&w=0&k=20&c=-ryP2FRnsbVeN9OaXXPZ4mYbJXDjCo3IZ94pgWCAL4o=" alt="Image 1"></div>
+            <h4 class="title">Tamil Nadu</h4>
+            <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati
+              cupiditate non provident</p>
+            <a href="tamilnadu.html"><button class="button">Explore</button></a>
+          </div>
+        </div>
+        <!-- Repeat the above structure for other icon-boxes -->
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Add Bootstrap JS bundle link -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- ======= Contact Section ======= -->
+  <section id="contact" class="contact section-bg">
+    <div class="container" data-aos="fade-up">
+
+      <div class="section-title">
+        <h2>Contact</h2>
+        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="info-box mb-4">
+            <i class="bx bx-map"></i>
+            <h3>Our Address</h3>
+            <p>Green Fields, Vaddeswaram, Andhra Pradesh 522302</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="info-box  mb-4">
+            <i class="bx bx-envelope"></i>
+            <h3>Email Us</h3>
+            <p>contact@gmail.com</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="info-box  mb-4">
+            <i class="bx bx-phone-call"></i>
+            <h3>Call Us</h3>
+            <p>+91 7093537603</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="row">
+
+        <div class="col-lg-6 ">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3826.664599550255!2d80.62035802555981!3d16.441851934292973!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a35f0a2a7d81943%3A0x8ba5d78f65df94b8!2sK%20L%20Deemed%20To%20Be%20University!5e0!3m2!1sen!2sin!4v1693827722761!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>        </div>
+
+        <div class="col-lg-6">
+          <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <div class="row">
+              <div class="col-md-6 form-group">
+                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+              </div>
+              <div class="col-md-6 form-group mt-3 mt-md-0">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+              </div>
+            </div>
+            <div class="form-group mt-3">
+              <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+            </div>
+            <div class="form-group mt-3">
+              <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+            </div>
+            <div class="my-3">
+              <div class="loading">Loading</div>
+              <div class="error-message"></div>
+              <div class="sent-message">Your message has been sent. Thank you!</div>
+            </div>
+            <div class="text-center"><button type="submit">Send Message</button></div>
+          </form>
+        </div>
+
+      </div>
+
+    </div>
+  </section><!-- End Contact Section -->
+
+  <footer id="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>SmartCity</h3>
+            <p>
+              KL University, Vijayawada <br><br>
+              <strong>Phone:</strong> +91 7093537603<br>
+              <strong>Email:</strong> Support_smartcity@gmail.com<br>
+            </p>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Tourism</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Hotels and Resturants</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Rentals</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Jobs</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Education</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Hospitals</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Entertirment</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Housing</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-newsletter">
+            <h4>Join Our Newsletter</h4>
+            <p>Keep in touch with us</p>
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="copyright-wrap d-md-flex py-4">
+        <div class="me-md-auto text-center text-md-start">
+          <div class="copyright">
+            &copy; Copyright <strong><span>SmartCity</span></strong>. All Rights Reserved
+          </div>
+        </div>
+        <div class="social-links text-center text-md-right pt-3 pt-md-0">
+          <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+          <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+          <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+          <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+          <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+        </div>
+      </div>
+
+    </div>
+  </footer><!-- End Footer -->
+</body>
+</html>

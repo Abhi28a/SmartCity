@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        // Function to show an alert when the user right-clicks
+        function showAlert(event) {
+            event.preventDefault(); // Prevent the default context menu
+            alert("Right-clicking is disabled on this page.");
+        }
+        
+        // Attach the showAlert function to the contextmenu event
+        document.addEventListener("contextmenu", showAlert);
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F8F0E5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .todo-container {
+            background-color: #EADBC8;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(16, 44, 87, 0.2);
+            width: 400px;
+            max-width: 100%;
+        }
+
+        .todo-header {
+            text-align: center;
+            font-size: 24px;
+            color: #102C57;
+            margin-bottom: 20px;
+        }
+
+        .todo-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .todo-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            padding: 5px;
+            border: 1px solid #DAC0A3;
+            border-radius: 5px;
+        }
+
+        .todo-text {
+            flex: 1;
+            margin-right: 10px;
+        }
+
+        .todo-buttons {
+            display: flex;
+            align-items: center;
+        }
+
+        .todo-buttons button {
+            background-color: #DAC0A3;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .todo-buttons button:hover {
+            background-color: #BA9C7A;
+        }
+
+        #addForm {
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin-top: 20px; /* Added margin-top for spacing */
+        }
+
+        #addForm input[type="text"] {
+            width: 70%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        #addForm button[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        #addForm button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="todo-container">
+        <h2 class="todo-header">To-Do List</h2>
+        <ul class="todo-list" id="todoList">
+            <!-- Tasks will be added dynamically here -->
+        </ul>
+        <form id="addForm">
+            <input type="text" id="newTodo" placeholder="Add a new task" required>
+            <button type="submit">Add</button>
+        </form>
+    </div>
+
+    <script>
+        const addForm = document.getElementById('addForm');
+        const newTodoInput = document.getElementById('newTodo');
+        const todoList = document.getElementById('todoList');
+
+        addForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const newTodoText = newTodoInput.value.trim();
+            if (newTodoText !== '') {
+                const newTodoItem = document.createElement('li');
+                newTodoItem.classList.add('todo-item');
+                newTodoItem.innerHTML = `
+                    <span class="todo-text">${newTodoText}</span>
+                    <div class="todo-buttons">
+                        <button class="delete-button">Delete</button>
+                    </div>
+                `;
+                todoList.appendChild(newTodoItem);
+                newTodoInput.value = '';
+            }
+        });
+
+        todoList.addEventListener('click', function (e) {
+            if (e.target.classList.contains('delete-button')) {
+                const todoItem = e.target.closest('.todo-item');
+                todoList.removeChild(todoItem);
+            }
+        });
+    </script>
+</body>
+</html>

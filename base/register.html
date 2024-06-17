@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="login.css">
+    <link rel="shortcut icon" type="image/x-icon" href="logo.png">
+
+    <title>Registration</title>
+</head>
+<body>
+    <div class="image-container">
+        <!-- Add an ID to the image for easy selection in JavaScript -->
+        <img id="logo" src="logo.png" alt="Logo" width="200px">
+    </div> 
+    <form class="login">
+        <input type="text" placeholder="Username">
+        <input type="email" placeholder="Email">
+        <input type="password" placeholder="Confirm Password">
+        <input type="password" placeholder="Password">
+        <button>SignUp</button>
+        <a style="font-size: larger; text-decoration: none; margin-bottom: 30px; color: #000; margin-right: 20px;" href="login.html">Login</a>
+    </form>
+
+    <!-- Add a script tag to add the click event listener -->
+    <script>
+        // Select the logo element by ID
+        var logo = document.getElementById('logo');
+
+        // Add a click event listener to the logo
+        logo.addEventListener('click', function() {
+            // Redirect to the desired URL when the logo is clicked
+            window.location.href = 'home.html';
+        });
+    </script>
+</body>
+</html>

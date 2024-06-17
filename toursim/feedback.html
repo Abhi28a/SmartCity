@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        // Function to show an alert when the user right-clicks
+        function showAlert(event) {
+            event.preventDefault(); // Prevent the default context menu
+            alert("Right-clicking is disabled on this page.");
+        }
+        
+        // Attach the showAlert function to the contextmenu event
+        document.addEventListener("contextmenu", showAlert);
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F8F0E5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        .feedback-container {
+            background-color: #EADBC8;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(16, 44, 87, 0.2);
+            width: 500px; /* Increased width */
+            max-width: 100%; /* Ensure container doesn't exceed viewport width */
+        }
+
+        .feedback-container h2 {
+            color: #102C57;
+            margin-bottom: 15px;
+            text-align: center; /* Center the text */
+        }
+
+        .feedback-form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        textarea {
+            padding: 15px; /* Increased padding */
+            border: 1px solid #DAC0A3;
+            border-radius: 5px;
+            width: 90%; /* Adjusted width */
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        .submit-button {
+            background-color: #DAC0A3;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .submit-button:hover {
+            background-color: #BA9C7A;
+        }
+    </style>
+</head>
+<body>
+    <div class="feedback-container">
+        <h2>Feedback Form</h2>
+        <form class="feedback-form" action="#" method="post">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="6" required></textarea>
+            </div>
+            <button type="submit" class="submit-button">Submit Feedback</button>
+        </form>
+    </div>
+</body>
+</html>

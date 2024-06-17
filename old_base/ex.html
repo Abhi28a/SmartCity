@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.ad-block {
+    padding: 50px;
+    font-size: 156px; /* Adjust the font size */
+    font-weight: 700; /* Add font-weight (bold) */
+    color: transparent; /* Make the text transparent */
+    -webkit-text-stroke: 1px #333; /* Create a hollow effect with a stroke */
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide the overflow text */
+}
+
+.marquee { /* Right to Left */
+    display: flex;
+    animation: marquee-right 10s linear infinite; /* Adjust the speed as needed */
+}
+
+.marquee2 { /* Left to Right */
+    display: flex;
+    animation: marquee-left 10s linear infinite; /* Adjust the speed as needed */
+}
+
+@keyframes marquee-right {
+    0% {
+        transform: translateX(100%); /* Start off-screen to the right */
+    }
+    100% {
+        transform: translateX(-100%); /* Move off-screen to the left */
+    }
+}
+
+@keyframes marquee-left {
+    0% {
+        transform: translateX(-100%); /* Start off-screen to the left */
+    }
+    100% {
+        transform: translateX(100%); /* Move off-screen to the right */
+    }
+}
+</style>
+</head>
+<body>
+<div class="ad-block">
+    <div class="marquee">One Stop Destination To Explore The City One Stop Destination To Explore The City</div>
+    <div class="marquee2">Another Example Text Another Example Text</div>
+</div>
+</body>
+</html>
