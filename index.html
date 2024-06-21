@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breeze Inn </title>
+
+    <link
+  rel="stylesheet"
+  href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+/>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+    <header>
+
+        <div id="menu-bar" class="fas fa-bars"></div>
+
+        <!-- <a href="#" class="logo"><span>B</span>reeze Inn.</a> -->
+        <a href="#" class="logo"><span>S</span>mart City.</a>
+
+        <nav class="navbar">
+             <a href="#home">home</a>
+             <a href="#packages">packages</a>
+             <a href="#services">services</a>
+             <a href="#gallery">gallery</a>
+             <a href="#review">review</a>
+             <a href="#contact">contact</a>
+             <a href="#book">book</a>
+        </nav>
+
+        <div class="icons">
+            <i class="fas fa-search" id="search-btn"></i>
+            <i class="fas fa-user" id="login-btn"></i>
+        </div>
+
+        <form action="" class="search-bar-container">
+            <input type="search" id="search-bar" placeholder="search here...">
+            <label for="search-bar" class="fas fa-search"></label>
+        </form>
+    </header>
+
+
+
+
+
+<div class="login-form-container">
+    <i class="fas fa-times" id="form-close"></i>
+    <form action="">
+         <h3>login</h3>
+         <input type="email" class="box" placeholder="enter your email">
+         <input type="password" class="box" placeholder="enter your email">
+         <input type="submit" value="login now" class="btn">
+         <input type="checkbox" id="remember">
+         <label for="remember">Remember me</label>
+         <p>forgrt password? <a href="#">click here</a></p>
+         <p>don't have and account? <a href="#">register now</a></p>
+    </form>
+</div>
+
+
+
+<section class="home" id="home">
+    <div class="content">
+        <h3> welcome to your home away from home!</h3>
+        <p>dicover new places with us, luxury awaits</p>
+        <a href="#" class="btn">discover more</a>
+    </div>
+
+    <div class="controls">
+        <span class="vid-btn active" data-src="background.mp4"></span>
+        <span class="vid-btn" data-src="background.mp4"></span>
+        <span class="vid-btn" data-src="background.mp4"></span>
+        <span class="vid-btn" data-src="background.mp4"></span>
+        <span class="vid-btn" data-src="background.mp4"></span>
+    </div>
+
+    <div class="video-container">
+        <video src="background.mp4" id="video-slider" loop autoplay muted></video>
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+<section class="packages" id="packages">
+    <h1 class="heading">
+        <span>p</span>
+        <span>a</span>
+        <span>c</span>
+        <span>k</span>
+        <span>a</span>
+        <span>g</span>
+        <span>e</span>
+        <span>s</span>
+
+    </h1>
+
+    <div class="box-container">
+        <div class="box">
+            <img decoding="async" src="lemon.jpg" alt="">
+            <div class="content">
+                <h3><i class="fas fa-map-marker-alt"></i> Lemon Tree </h3>
+                <p>Lorem Ipsum is simply dummy text of the farhan and typesetting industry.</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="price">₹1137.00 <span>₹1499.00</span></div>
+                <a href="#" class="btn">book now</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img decoding="async" src="jade.jpg" alt="">
+            <div class="content">
+                <h3><i class="fas fa-map-marker-alt"></i> Jade Suits </h3>
+                <p>Lorem Ipsum is simply dummy text of the farhan and typesetting industry.</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="price">₹999.00 <span>₹1599.00</span></div>
+                <a href="#" class="btn">book now</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img decoding="async" src="citycentral.jpg" alt="">
+            <div class="content">
+                <h3><i class="fas fa-map-marker-alt"></i> City Central </h3>
+                <p>Lorem Ipsum is simply dummy text of the farhan and typesetting industry.</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="price">₹1537.00 <span>₹2099.00</span></div>
+                <a href="#" class="btn">book now</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img decoding="async" src="midcity.jpg.jpg" alt="">
+            <div class="content">
+                <h3><i class="fas fa-map-marker-alt"></i> Midcity </h3>
+                <p>Lorem Ipsum is simply dummy text of the farhan and typesetting industry.</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="price">₹1227.00 <span>₹1899.00</span></div>
+                <a href="#" class="btn">book now</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img decoding="async" src="Aira.jpg" alt="">
+            <div class="content">
+                <h3><i class="fas fa-map-marker-alt"></i> Aira </h3>
+                <p>Lorem Ipsum is simply dummy text of the farhan and typesetting industry.</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="price">₹1537.00 <span>₹2099.00</span></div>
+                <a href="#" class="btn">book now</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img decoding="async" src="park.jpg" alt="">
+            <div class="content">
+                <h3><i class="fas fa-map-marker-alt"></i> Park Iris</h3>
+                <p>Lorem Ipsum is simply dummy text of the farhan and typesetting industry.</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="price">₹1299.00 <span>₹1699.00</span></div>
+                <a href="#" class="btn">book now</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+<section class="services" id="services">
+    <h1 class="heading">
+        <span>s</span>
+        <span>e</span>
+        <span>r</span>
+        <span>v</span>
+        <span>i</span>
+        <span>c</span>
+        <span>e</span>
+        <span>s</span>
+    </h1>
+
+    <div class="box-container">
+        <div class="box">
+            <i class="fas fa-hotel"></i>
+                <h3>affordable hotels</h3>
+                <p>Welcome to Breeze Inn, where affordability meets quality,
+                   and your comfort is our priority. If you're a budget-conscious 
+                   traveler seeking a delightful stay without compromising on convenience, look no further.</p>
+        </div>
+        <div class="box">
+            <i class="fas fa-utensils"></i>
+                <h3>Hospitality</h3>
+                <p>Now, we take pride in our warm and welcoming staff. From the moment you check in,
+                   our team is dedicated to making your stay enjoyable and hassle-free. 
+                  Need local recommendations or assistance? We're here to help 24/7.</p>
+        </div>
+        <div class="box">
+            <i class="fas fa-bullhorn"></i>
+                <h3>safety guide</h3>
+                <p>Your well-being is our top priority. We provide a comprehensive safety guide that includes tips for navigating nearest
+                  urban landscape and advice on staying vigilant while enjoying your escapades.
+                   Rest assured, you can experience exhilarating adventures with confidence.</p>
+        </div>
+        <div class="box">
+            <i class="fas fa-globe-asia"></i>
+                <h3>around the world</h3>
+                <p>Ready to embark on an exhilarating journey? Choose the comfortable one  as your base for high-speed travel and unforgettable experiences.
+                   Whether you're conquering mountains, traversing oceans, or diving into vibrant cultures,
+                   let us be your home away from home as you chase the thrill of adventure across the globe.</p>
+        </div>
+        <div class="box">
+            <i class="fas fa-plane"></i>
+                <h3>fastest travel</h3>
+                <p>Time is of the essence, and we get it. Our strategic location ensures that you can swiftly move from one destination to another. 
+                  Whether you're exploring iconic landmarks, hidden gems, or off-the-beaten-path wonders,
+                   We minimize travel time, giving you more moments to cherish.</p>
+        </div>
+        <div class="box">
+            <i class="fas fa-hiking"></i>
+                <h3>adventures</h3>
+                <p>  Here, we understand your craving 
+                  for excitement. Our prime location places you in the heart of the city, offering quick access to adrenaline-pumping activities such as gokarting and more. Dive into the local adventure scene 
+                  and create memories that will last a lifetime.</p>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+<section class="gallery" id="gallery">
+    <h1 class="heading">
+        <span>g</span>
+        <span>a</span>
+        <span>l</span>
+        <span>l</span>
+        <span>e</span>
+        <span>r</span>
+        <span>y</span>
+    </h1>
+
+
+<div class="box-container">
+    <div class="box">
+        <img decoding="async" src="park.jpg" alt="">
+        <div class="content">
+            <h3>amazing places</h3>
+            <p>Lorem Ipsum is simply dummy text of the farhan and typesetting industry.</p>
+            <a href="#" class="btn">see more</a>
+        </div>
+    </div>
+    <div class="box">
+        <img decoding="async" src="gallery.jpeg" alt="">
+        <div class="content">
+            <h3>amazing places</h3>
+            <p>Lorem Ipsum is simply dummy text of the farhan and typesetting industry.</p>
+            <a href="#" class="btn">see more</a>
+        </div>
+    </div>
+    <div class="box">
+        <img decoding="async" src="g2.jpeg" alt="">
+        <div class="content">
+            <h3>amazing places</h3>
+            <p>Lorem Ipsum is simply dummy text of the farhan and typesetting industry.</p>
+            <a href="#" class="btn">see more</a>
+        </div>
+    </div>
+    <div class="box">
+        <img decoding="async" src="citycentral.jpg" alt="">
+        <div class="content">
+            <h3>amazing places</h3>
+            <p>Lorem Ipsum is simply dummy text of the farhan and typesetting industry.</p>
+            <a href="#" class="btn">see more</a>
+        </div>
+    </div>
+    <div class="box">
+        <img decoding="async" src="Aira.jpg" alt="">
+        <div class="content">
+            <h3>amazing places</h3>
+            <p>Lorem Ipsum is simply dummy text of the farhan and typesetting industry.</p>
+            <a href="#" class="btn">see more</a>
+        </div>
+    </div>
+    <div class="box">
+        <img decoding="async" src="jade.jpg" alt="">
+        <div class="content">
+            <h3>amazing places</h3>
+            <p>Lorem Ipsum is simply dummy text of the farhan and typesetting industry.</p>
+            <a href="#" class="btn">see more</a>
+        </div>
+    </div>
+    <div class="box">
+        <img decoding="async" src="midcity.jpg.jpg" alt="">
+        <div class="content">
+            <h3>amazing places</h3>
+            <p>Lorem Ipsum is simply dummy text of the farhan and typesetting industry.</p>
+            <a href="#" class="btn">see more</a>
+        </div>
+    </div>
+    <div class="box">
+        <img decoding="async" src="lemon.jpg" alt="">
+        <div class="content">
+            <h3>amazing places</h3>
+            <p>Lorem Ipsum is simply dummy text of the farhan and typesetting industry.</p>
+            <a href="#" class="btn">see more</a>
+        </div>
+    </div>
+    <div class="box">
+        <img decoding="async" src="hotel.jpg" alt="">
+        <div class="content">
+            <h3>amazing places</h3>
+            <p>Lorem Ipsum is simply dummy text of the farhan and typesetting industry.</p>
+            <a href="#" class="btn">see more</a>
+        </div>
+    </div>
+</div>
+</section>
+
+
+
+
+
+<section class="review" id="review">
+    <h1 class="heading">
+        <span>r</span>
+        <span>e</span>
+        <span>v</span>
+        <span>i</span>
+        <span>e</span>
+        <span>w</span>
+    </h1>
+    <div class="swiper mySwiper review-slider">
+        <div class="swiper-wrapper wrapper">
+            <div class="swiper-slide">
+                <div class="box">
+                    <img decoding="async" src="p4.jpg" alt="">
+                    <h3>Rishwanth</h3>
+                    <p>Lorem Ipsum is simply dummy text of the farhan and typesetting industry.
+                        Lorem Ipsum is simply dummy text of the farhan and typesetting industry
+                        Lorem Ipsum is simply dummy text of the farhan and typesetting industry
+                        farhan and typesetting industry.</p>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="box">
+                    <img decoding="async" src="person1.jpg" alt="">
+                    <h3>Abhinav</h3>
+                    <p>Lorem Ipsum is simply dummy text of the farhan and typesetting industry.
+                        Lorem Ipsum is simply dummy text of the farhan and typesetting industry
+                        Lorem Ipsum is simply dummy text of the farhan and typesetting industry
+                        farhan and typesetting industry.</p>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="box">
+                    <img decoding="async" src="p2.jpg" alt="">
+                    <h3>Prameela</h3>
+                    <p>Lorem Ipsum is simply dummy text of the farhan and typesetting industry.
+                        Lorem Ipsum is simply dummy text of the farhan and typesetting industry
+                        Lorem Ipsum is simply dummy text of the farhan and typesetting industry
+                        farhan and typesetting industry.</p>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="box">
+                    <img decoding="async" src="p3.jpeg" alt="">
+                    <h3>Rishitha</h3>
+                    <p>Lorem Ipsum is simply dummy text of the farhan and typesetting industry.
+                        Lorem Ipsum is simply dummy text of the farhan and typesetting industry
+                        Lorem Ipsum is simply dummy text of the farhan and typesetting industry
+                        farhan and typesetting industry.</p>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                </div>
+                </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+<section class="contact" id="contact">
+    <h1 class="heading">
+        <span>c</span>
+        <span>o</span>
+        <span>n</span>
+        <span>t</span>
+        <span>a</span>
+        <span>c</span>
+        <span>t</span>
+    </h1>
+    <div class="row">
+        <div class="img">
+            <img decoding="async" src="img/contact-img.svg" alt="">
+        </div>
+        <form action="">
+            <div class="inputBox">
+                <input type="text" placeholder="name">
+                <input type="email" placeholder="email">
+            </div>
+            <div class="inputBox">
+                <input type="number" placeholder="number">
+                <input type="text" placeholder="subject">
+            </div>
+            <textarea placeholder="message" name="" cols="30" rows="10"></textarea>
+            <input type="submit" class="btn" value="send message">
+        </form>
+    </div>
+</section>
+
+
+
+
+
+<section class="brand-container">
+    <div class="swiper mySwiper brand-slider">
+        <div class="swiper-wrapper wrapper">
+            <div class="swiper-slide"><img decoding="async" src="lemon.jpg" alt=""></div>
+            <div class="swiper-slide"><img decoding="async" src="citycentral.jpg" alt=""></div>
+            <div class="swiper-slide"><img decoding="async" src="Aira.jpg" alt=""></div>
+            <div class="swiper-slide"><img decoding="async" src="jade.jpg" alt=""></div>
+            <div class="swiper-slide"><img decoding="async" src="park.jpg" alt=""></div>
+            <div class="swiper-slide"><img decoding="async" src="midcity.jpg" alt=""></div>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="book" id="book">
+    <h1 class="heading">
+        <span>b</span>
+        <span>o</span>
+        <span>o</span>
+        <span>k</span>
+        <span class="space"></span>
+        <span>n</span>
+        <span>o</span>
+        <span>w</span>
+    </h1>
+
+    <div class="row">
+        <div class="img">
+            <img decoding="async" src="img/book-img.svg" alt="">
+        </div>
+
+        <form action="">
+              <div class="inputBox">
+                  <h3>where to</h3>
+                  <input type="text" placeholder="place name">
+              </div>
+              <div class="inputBox">
+                <h3>how many</h3>
+                <input type="number" placeholder="number of guests">
+            </div>
+            <div class="inputBox">
+                <h3>arrivals</h3>
+                <input type="date">
+            </div>
+            <div class="inputBox">
+                <h3>leaving</h3>
+                <input type="date">
+            </div>
+            <input type="submit" class="btn" value="book now">
+        </form>
+    </div>
+</section>
+
+
+
+
+<section class="footer">
+    <div class="box-container">
+        <div class="box">
+            <h3>about us</h3>
+            <p>Discover unparalleled comfort and luxury in the city. Indulge in exquisite accommodations, 
+              world-class dining, and top-notch facilities, including a rejuvenating spa and rooftop pool. 
+              Our dedicated team is here to ensure your stay is exceptional.
+               Book now for an unforgettable experience at [HotelName].</p>
+        </div>
+        <div class="box">
+            <h3>branch locations</h3>
+            <a href="#">Vijayawada</a>
+            <a href="#">Hyderabad</a>
+            <a href="#">Gannavaram</a>
+            <a href="#">Guntur</a>
+            <a href="#">Ongole</a>
+        </div>
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="#">home</a>
+            <a href="#">package</a>
+            <a href="#">service</a>
+            <a href="#">gallery</a>
+            <a href="#">review</a>
+            <a href="#">contact</a>
+            <a href="#">book</a>
+        </div>
+        <div class="box">
+            <h3>follow us</h3>
+            <a href="#">facebook</a>
+            <a href="#">instagram</a>
+            <a href="#">twitter</a>
+            <a href="#">likedin</a>
+        </div>
+    </div>
+    <h1 class="credit"> created by <span>Team</span> | all rights reserved!! </h1>
+</section> <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js" defer data-deferred="1"></script>  <script src="main.js" defer data-deferred="1"></script> </body>
+</html>

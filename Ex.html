@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume/CV Builder</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+#form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    padding: 5px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+button {
+    padding: 10px 20px;
+    margin-top: 15px;
+    background-color: #0074cc;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056aa;
+}
+
+#cv-output {
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+    </style>
+
+</head>
+<body>
+    <h1>Resume/CV Builder</h1>
+
+    <div id="form-container">
+        <form id="cv-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+
+            <label for="summary">Summary:</label>
+            <textarea id="summary" rows="4" required></textarea>
+
+            <label for="education">Education:</label>
+            <input type="text" id="education" required>
+
+            <label for="experience">Experience:</label>
+            <input type="text" id="experience" required>
+
+            <button type="submit">Generate CV</button>
+        </form>
+    </div>
+
+    <div id="cv-output">
+        <!-- Generated CV will be displayed here -->
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    const cvForm = document.getElementById("cv-form");
+    const cvOutput = document.getElementById("cv-output");
+
+    cvForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const summary = document.getElementById("summary").value;
+        const education = document.getElementById("education").value;
+        const experience = document.getElementById("experience").value;
+
+        const cvContent = `
+            <h2>${name}</h2>
+            <p>Email: ${email}</p>
+            <h3>Summary</h3>
+            <p>${summary}</p>
+            <h3>Education</h3>
+            <p>${education}</p>
+            <h3>Experience</h3>
+            <p>${experience}</p>
+        `;
+
+        cvOutput.innerHTML = cvContent;
+    });
+});
+
+    </script>
+</body>
+</html>
